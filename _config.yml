@@ -1,4 +1,5 @@
-title: "Ignacio Ruiz Cejudo"
+title: "isatelite4.github.io"
+minimal_mistakes_skin: "default"
 name: "Ignacio Ruiz Cejudo"
 description: "PhD Candidate | IAC"
 url: "https://isatelite4.github.io"
@@ -7,7 +8,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
-
+include:
+  - _pages
 # Sidebar con tu foto y redes sociales
 author:
   name: "Ignacio Ruiz Cejudo"
@@ -26,9 +28,7 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/ignacio-ruiz-cejudo-51815b247"
-    - label: "ORCID"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://orcid.org/0009-0003-6502-7714"
+
 
 # Menú de navegación
 defaults:

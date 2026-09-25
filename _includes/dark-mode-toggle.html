@@ -1,0 +1,52 @@
+<button id="theme-toggle" style="
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: var(--background-color, #fff);
+  border: 2px solid #aaa;
+  border-radius: 50px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+" title="Toggle dark mode">🌙</button>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const stored = localStorage.getItem('theme');
+
+  function setTheme(dark) {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    toggle.textContent = dark ? '☀️' : '🌙';
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  // Aplica el tema guardado al cargar
+  setTheme(stored === 'dark');
+
+  toggle.addEventListener('click', () => {
+    setTheme(localStorage.getItem('theme') !== 'dark');
+  });
+</script>
+
+<style>
+  [data-theme="dark"] body {
+    background-color: #1a1a2e !important;
+    color: #eee !important;
+  }
+  [data-theme="dark"] .sidebar {
+    background-color: #16213e !important;
+  }
+  [data-theme="dark"] a {
+    color: #7ec8e3 !important;
+  }
+  [data-theme="dark"] .masthead {
+    background-color: #16213e !important;
+    border-bottom: 1px solid #333 !important;
+  }
+  [data-theme="dark"] .page__content,
+  [data-theme="dark"] .archive__item {
+    background-color: #1a1a2e !important;
+  }
+</style>
