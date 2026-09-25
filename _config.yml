@@ -1,0 +1,45 @@
+title: "Ignacio Ruiz Cejudo"
+name: "Ignacio Ruiz Cejudo"
+description: "PhD Candidate | IAC"
+url: "https://isatelite4.github.io"
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Sidebar con tu foto y redes sociales
+author:
+  name: "Ignacio Ruiz Cejudo"
+  avatar: "/assets/images/foto.jpg"
+  bio: "Partial time astrophysicist, full time astronomer. PhD Candidate at the Instituto de Astrofísica de Canarias (IAC)."
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:ignaciomrrd.es@gmail.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/isatelite4_"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/isatelite4"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/ignacio-ruiz-cejudo-51815b247"
+    - label: "ORCID"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://orcid.org/0009-0003-6502-7714"
+
+# Menú de navegación
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "single"
+      author_profile: true   # ← esto activa el sidebar en todas las páginas
+
+# Navegación
+header_pages:
+  - _pages/research.md
+  - _pages/cv.md
+  - _pages/interests.md
